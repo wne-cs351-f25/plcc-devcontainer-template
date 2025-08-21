@@ -28,15 +28,18 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Claude
+# Install claude (Anthropic)
 RUN npm install -g @anthropic-ai/claude-code
 
-# Install gemini-cli
+# Install gemini-cli (Google)
 RUN npm install -g @google/gemini-cli
 
-# Install Codex (OpenAI)
+# Install codex (OpenAI)
 RUN npm install -g @openai/codex
 # you'll need to set your key `export OPENAI_API_KEY="<OAI_KEY>"`
+
+# Install github-copilot-cli (Microsoft)
+RUN npm install -g @githubnext/github-copilot-cli
 
 ENV PLCC_GIT_BRANCH=main
 # plcc install in postCreateCommand
