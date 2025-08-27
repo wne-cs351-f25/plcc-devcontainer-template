@@ -12,10 +12,6 @@ RUN apt-get update && \
         unzip \
         gnupg2 \
         gh \
-        iptables \
-        ipset \
-        iproute2 \
-        dnsutils \
         aggregate \
         jq \
         nano \
@@ -27,6 +23,16 @@ RUN apt-get update && \
         time && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+# Default powerline10k theme
+ARG ZSH_IN_DOCKER_VERSION=1.2.0
+RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v${ZSH_IN_DOCKER_VERSION}/zsh-in-docker.sh)" -- \
+  -p git \
+  -p fzf \
+  -a "source /usr/share/doc/fzf/examples/key-bindings.zsh" \
+  -a "source /usr/share/doc/fzf/examples/completion.zsh" \
+  -a "export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
+  -x
 
 # Install claude (Anthropic)
 RUN npm install -g @anthropic-ai/claude-code

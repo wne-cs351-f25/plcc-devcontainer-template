@@ -15,19 +15,10 @@
     },
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21",
-      "jdkDistro": "open",
-      "gradleVersion": "latest",
-      "mavenVersion": "latest",
-      "antVersion": "latest",
-      "groovyVersion": "latest"
+      "jdkDistro": "open"
     }
   },
-  "runArgs": [
-    "--cap-add=NET_ADMIN",
-    "--cap-add=NET_RAW",
-    "--name",
-    "cs351-devcontainer-template"
-  ],
+  "runArgs": ["--name", "cs351-devcontainer-template"],
   "customizations": {
     "vscode": {
       "extensions": [
