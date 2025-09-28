@@ -30,10 +30,11 @@
       ],
       "settings": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": "explicit"
+        "files.associations": {
+          "**/grammar": "plantext",
+          "**/code": "java"
         },
+        "files.autoSave": "afterDelay",
         "terminal.integrated.defaultProfile.linux": "bash",
         "terminal.integrated.profiles.linux": {
           "bash": {
