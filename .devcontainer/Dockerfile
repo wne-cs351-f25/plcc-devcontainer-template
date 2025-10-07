@@ -47,6 +47,8 @@ RUN npm install -g @openai/codex
 # Install github-copilot-cli (Microsoft)
 RUN npm install -g @githubnext/github-copilot-cli
 
+RUN npm install -g @intellectronica/ruler
+
 ENV PLCC_GIT_BRANCH=main
 # plcc install in postCreateCommand
 
