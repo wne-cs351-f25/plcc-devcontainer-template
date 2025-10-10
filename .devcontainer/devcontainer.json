@@ -29,6 +29,7 @@
         "ms-python.vscode-pylance"
       ],
       "settings": {
+        "editor.acceptSuggestionOnEnter": "off",
         "editor.formatOnSave": true,
         "files.associations": {
           "**/grammar": "plantext",
