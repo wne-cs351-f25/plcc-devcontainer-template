@@ -26,18 +26,19 @@
         "esbenp.prettier-vscode",
         "eamodio.gitlens",
         "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.vscode-pylance",
+        "GabeKouki.plcc-grammar"
       ],
       "settings": {
         "editor.acceptSuggestionOnEnter": "off",
         "editor.formatOnSave": true,
         "files.associations": {
-          "**/grammar": "plantext",
           "**/code": "java",
           "**/env": "java",
-          "**/envVal": "java",
+          "**/envRef": "java",
           "**/prim": "java",
-          "**/val": "java"
+          "**/val": "java",
+          "**/ref": "java"
         },
         "files.autoSave": "afterDelay",
         "terminal.integrated.defaultProfile.linux": "bash",
